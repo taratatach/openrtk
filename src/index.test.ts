@@ -86,7 +86,7 @@ describe("rewrite", () => {
     })
 
     test("rewrites rg", () => {
-      expect(rewrite("rg pattern")).toBe("rtk grep pattern")
+      expect(rewrite("rg pattern")).toBe("rtk rg pattern")
     })
 
     test("rewrites ls", () => {
