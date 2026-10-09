@@ -2,8 +2,7 @@
   "name": "openrtk",
   "version": "0.1.0",
   "description": "OpenCode plugin for RTK (Rust Token Killer) - reduces LLM token consumption by 60-90% on dev commands",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./index.ts",
   "type": "module",
   "files": [
     "index.ts",
@@ -12,9 +11,9 @@
     "opencode.md"
   ],
   "scripts": {
-    "build": "tsc",
+    "compile": "tsc",
     "test": "bun test",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run compile"
   },
   "keywords": [
     "opencode",
