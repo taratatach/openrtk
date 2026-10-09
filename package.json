@@ -6,7 +6,9 @@
   "types": "lib/index.d.ts",
   "type": "module",
   "files": [
+    "index.ts",
     "lib",
+    "src",
     "opencode.md"
   ],
   "scripts": {
