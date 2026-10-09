@@ -28,7 +28,19 @@ Then add to your OpenCode config (`opencode.json` or `.opencode/opencode.json`):
 }
 ```
 
-Or point your config at the `src/` directory in a local checkout. This repo loads itself through `.opencode/plugins/openrtk.ts`.
+Or clone the repository into your OpenCode plugins directory and point the config at the clone:
+
+```bash
+git clone https://github.com/taratatach/openrtk.git ~/.config/opencode/plugins/openrtk
+```
+
+```json
+{
+  "plugins": ["./plugins/openrtk"]
+}
+```
+
+OpenCode resolves a directory plugin through a root `index.ts` (or `server.*`) file and ignores `package.json` `main`, which is why this repository ships one. The entrypoint re-exports `src/index` directly, so OpenCode transpiles the TypeScript on the fly — `npm run build` is only needed for publishing and tests. This repo also loads itself through `.opencode/plugins/openrtk.ts` when OpenCode runs inside a checkout.
 
 ## OpenCode compatibility
 
