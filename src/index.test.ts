@@ -180,7 +180,7 @@ describe("rewrite", () => {
     })
 
     test("rewrites mix test", () => {
-      expect(rewrite("mix test")).toBe("rtk mix test")
+      expect(rewrite("mix test")).toBe("rtk test mix test")
     })
 
     test("rewrites mix compile", () => {
